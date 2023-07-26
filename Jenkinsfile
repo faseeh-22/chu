@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Git Checkout') {
             steps {
-                echo 'Hello World'
+                git credentialsId: 'git-checkout-branch-pipeline', url: 'https://github.com/faseeh-22/chu.git'
             }
         }
     }
